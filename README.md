@@ -9,6 +9,10 @@ A TCI WI Connector is planed for later.
 ## Activities
 available Activities so far
 ### SMS Sender
+Flow Screenshot inside TIBCO Cloud Integration Web Integrator
+
+![Twilio SMS image](screenshots/twilio-SMS-in-TCI-WebIntegrator.png?raw=true "TCI WI Twilio SMS Screenshot")
+
 Input
 - accountSID            string
 - authToken             string
