@@ -1,0 +1,60 @@
+{
+    "name": "SMSsender",
+    "version": "1.0.0",
+    "title": "SMS Sender",
+    "author": "TIBCO Software Inc. [JGrotex]",
+    "type": "flogo:activity",
+     
+    "display": {
+       "category": "Twilio",
+       "visible": true,
+       "smallIcon": "icons/ic-twilio-sms.png",
+       "largeIcon": "icons/ic-twilio-sms@2x.png",
+       "description": "Activity sends a SMS to any Number over Twilio API"
+    },
+ 
+    "ref": "github.com/JGrotex/tci-wi-twilio-extension/Twilio/activity/sms",
+    "inputs": [
+           {
+            "name": "accountSID",
+            "type": "string",
+            "required": true,
+            "display":{
+              "name": "account SID",
+              "description": "Twilio API Config of your account_sid"
+            }
+           },
+           {
+            "name": "authToken",
+            "type": "string",
+            "required": true,
+            "display":{
+              "name": "auth Token",
+              "description": "Twilio API Config of your auth_token"
+            }
+           },
+           {
+            "name": "FromNumber",
+            "type": "string",
+            "required": true,
+            "display":{
+              "name": "From Phone Number",
+              "description": "Twilio API Config of from Phone Number"
+            }
+           },
+           {
+            "name": "ToNumber",
+            "type": "string",
+            "required": true
+           },
+           {
+            "name": "SMStext",
+            "type": "string",
+            "required": true
+           }
+    ],
+  
+    "outputs": [
+        {"name": "send","type": "boolean"}
+    ]
+}
