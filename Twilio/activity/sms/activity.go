@@ -1,9 +1,10 @@
+package sms
+
 /*
  * Copyright © 2018. TIBCO Software Inc. [JGR]
  * This file is subject to the license terms contained
  * in the license file that is distributed with this file.
  */
-package sms
 
 import (
 	"encoding/json"
@@ -31,6 +32,7 @@ type smsActivity struct {
 	metadata *activity.Metadata
 }
 
+//NewActivity TCI Wi Activity
 func NewActivity(metadata *activity.Metadata) activity.Activity {
 	return &smsActivity{metadata: metadata}
 }
