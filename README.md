@@ -1,4 +1,6 @@
 # TCI WI Twilio Extension
+[![Go Report Card](https://goreportcard.com/badge/github.com/JGrotex/tci-wi-twilio-extension)](https://goreportcard.com/report/github.com/JGrotex/tci-wi-twilio-extension) [![GoDoc](https://godoc.org/github.com/JGrotex/tci-wi-twilio-extension?status.svg)](https://godoc.org/github.com/JGrotex/tci-wi-twilio-extension) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 first draft Version with just a SMS sender using Twilio API, more to come ...
 
 The attached ZIP contains the first release v.1.0 and can just uploaded under TIBCO Cloud Integration Extensions
