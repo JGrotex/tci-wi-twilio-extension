@@ -6,7 +6,8 @@
 package sms
 
 import (
-	"fmt"
+	"encoding/json"
+	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
@@ -97,9 +98,21 @@ func (a *smsActivity) Eval(context activity.Context) (done bool, err error) {
 
 	// Make request
 	resp, _ := client.Do(req)
-	fmt.Println(resp.Status)
 
-	context.SetOutput(ovsend, true)
+	if resp.StatusCode >= 200 && resp.StatusCode < 300 {
+		var data map[string]interface{}
+		bodyBytes, _ := ioutil.ReadAll(resp.Body)
+		err := json.Unmarshal(bodyBytes, &data)
+		if err == nil {
+			context.SetOutput(ovsend, true)
+			var sid string
+			sid = data["sid"].(string)
+			activityLog.Info("Twilio SMS SID: " + sid)
+		}
+	} else {
+		context.SetOutput(ovsend, false)
+		activityLog.Error("Twilio SMS Status: " + resp.Status)
+	}
 
 	return true, nil
 }
