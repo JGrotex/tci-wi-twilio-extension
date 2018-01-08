@@ -41,6 +41,8 @@ func TestEval(t *testing.T) {
 	act := NewActivity(getActivityMetadata())
 	tc := test.NewTestActivityContext(act.Metadata())
 
+	// *** for testing, replace all in <> with your Account Details!
+
 	//setup attrs
 	tc.SetInput("accountSID", "<your valid accountSID>")
 	tc.SetInput("authToken", "<your valid authToken>")
