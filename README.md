@@ -5,8 +5,11 @@ first draft Version with just a SMS sender using Twilio API, more to come ...
 
 The attached ZIP contains the first release v.1.0 and can just uploaded under TIBCO Cloud Integration Extensions
 
-Please create your own 'free' Access Key on Twilio (http://www.Twilio.com) to enter into the Activity Details.
+Please create your own 'free' Access Key on Twilio (http://www.twilio.com) to enter into the Activity Details.
 A TCI WI Connector is planed for later. 
+
+## Sample Integration
+here a sample of how to [connect this Service](connectAMXBPM.md) from TIBCO ActiveMatrix BPM. 
 
 ## Activities
 available Activities so far
