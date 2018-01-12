@@ -1,0 +1,53 @@
+{
+	"info": {
+		"description": " ",
+		"title": "SMSsender",
+		"version": "1.0.0"
+	},
+	"paths": {
+		"/sendSMS": {
+			"post": {
+				"operationId": "post_sendSMS",
+				"parameters": [
+					{
+						"description": "request body parameter",
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"properties": {
+								"body": {
+									"type": "string"
+								},
+								"to": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Rest Response",
+						"schema": {
+							"properties": {
+								"send": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						}
+					}
+				},
+				"summary": "sendSMS_POST"
+			}
+		}
+	},
+	"swagger": "2.0",
+	"host": "eu-west-1.integration.cloud.tibcoapps.com:443",
+	"schemes": [
+		"https"
+	],
+	"basePath": "/<<your basePath>>"
+}
