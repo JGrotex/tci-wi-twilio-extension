@@ -11,8 +11,3 @@ here a little Tutorial about how to connect the TIBCO Cloud Integration (TCI) We
 to have the complete picture here the Swagger 2.0 JSON File
 
 [SMSsender.json](screenshots/bpm/SMSsender.json)
-=======
-... soon ... .. .
-
-it's just about standard REST Configurations.
->>>>>>> f4ca5b27a4b13cd8ffd5c73e7a64069da90d402c
