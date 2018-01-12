@@ -3,21 +3,27 @@ here a little Tutorial about how to connect the TIBCO Cloud Integration (TCI) We
 
 ## Business Studio Configuration (Designtime)
 Flow Activity somewhere within a BPMN Flow 
+
 ![pic](screenshots/bpm/BStask.png?raw=true "Business Studio BPMN Flow Activity")
 
 Flow Activity configuration, plus graphical Request/Response mapping 
+
 ![pic](screenshots/bpm/BSproperties.png?raw=true "Business Studio Activity Configuration")
 
 REST .RSD File definition and .JSD Schema Files in REST Service Folder of Business Studio
+
 ![pic](screenshots/bpm/RESTcall.png?raw=true "REST Folder Files")
 
 REST Configuration Overview in Business Studio Properties .RSD
+
 ![pic](screenshots/bpm/RESTconfig.png?raw=true "REST Configuration")
 
 REST Request Schema .JSD
+
 ![pic](screenshots/bpm/requestSchema.png?raw=true "REST Request Schema")
 
 REST Response Schema .JSD
+
 ![pic](screenshots/bpm/responseSchema.png?raw=true "REST Response Schema")
 
 ## ActiveMatrix (AMX) Service Grid Configuration (Runtime)
