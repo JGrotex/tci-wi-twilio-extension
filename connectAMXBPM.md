@@ -1,6 +1,9 @@
 # how to connect TIBCO ActiveMatix BPM
 here a little Tutorial about how to connect the TIBCO Cloud Integration (TCI) Webintegrator Service with TIBCO AciveMatrix BPM.
 
+<i>prerequisites:</i>
+You need to install TIBCO ActiveMatrix® Binding Type for REST 3.3.0 to use the REST Service feature. See "Installing TIBCO ActiveMatrix® Binding Type for REST 3.3.0" in TIBCO ActiveMatrix® BPM Installation Guide. You also need to install any relevant runtime hotfixes.  
+
 ## Business Studio Configuration (Designtime)
 Flow Activity somewhere within a BPMN Flow 
 
