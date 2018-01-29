@@ -25,6 +25,9 @@ Input
 - ToPhonenumber         string
 - SMStext               string
 
+<i>Hint:</i> Sender is working as well if you specify only a String as FromPhonenumber e.g. 'TIBCO Casemanagement'.
+So you don't need to order a SMS Sender Number from Twilio.
+
 Output
 - send               bool   `json:"send"`
   
