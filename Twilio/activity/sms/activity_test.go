@@ -44,10 +44,10 @@ func TestEval(t *testing.T) {
 	// *** for testing, replace all in <> with your Account Details!
 
 	//setup attrs
-	tc.SetInput("accountSID", "<your valid accountSID>")
-	tc.SetInput("authToken", "<your valid authToken>")
-	tc.SetInput("FromNumber", "<your valid FromNumber>")
-	tc.SetInput("ToNumber", "<your valid ToNumber>")
+	tc.SetInput("accountSID", "***REMOVED***")
+	tc.SetInput("authToken", "***REMOVED***")
+	tc.SetInput("FromNumber", "TWILIO")
+	tc.SetInput("ToNumber", "***REMOVED***")
 	tc.SetInput("SMStext", "hi from GODev")
 
 	_, err := act.Eval(tc)
