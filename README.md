@@ -9,6 +9,7 @@ Please create your own 'free' Access Key on Twilio (http://www.twilio.com) to en
 A TCI WI Connector is planed for later. 
 
 ## Sample Integration
+TCI Sample APP Exports can be found in [TCIAppExport](TCIAppExport) Folder, they are all ready to use.
 here a sample of how to [connect this Service](connectAMXBPM.md) from TIBCO ActiveMatrix BPM. 
 
 ## Activities

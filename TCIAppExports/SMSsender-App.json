@@ -1,0 +1,397 @@
+{
+ "modelVersion": "1.0.0",
+ "id": "4wtjf3fvuompourhiv4kppjxmuccnav7",
+ "applicationName": "SMSsenderGit",
+ "description": " ",
+ "version": 0,
+ "flows": {
+  "d9aa27ec-e670-40c7-8a0f-b7c785651a36": {
+   "_id": "d9aa27ec-e670-40c7-8a0f-b7c785651a36",
+   "name": "sendSMS_POST",
+   "description": null,
+   "items": {
+    "70b5d7f9-4681-4a5d-9d9d-38ce571404ae": {
+     "id": "70b5d7f9-4681-4a5d-9d9d-38ce571404ae",
+     "type": "flogo:trigger",
+     "taskType": 0,
+     "version": "1.0.0",
+     "name": "tibco-wi-rest",
+     "title": "ReceiveHTTPMessage",
+     "description": "Simple REST Trigger",
+     "ref": "git.tibco.com/git/product/ipaas/wi-contrib.git/trigger/general/rest",
+     "settings": [
+      {
+       "name": "port",
+       "type": "integer",
+       "required": true,
+       "display": {
+        "description": "The port for rest trigger",
+        "visible": false
+       },
+       "value": "9999"
+      }
+     ],
+     "outputs": [
+      {
+       "name": "queryParams",
+       "type": "complex_object",
+       "display": {
+        "type": "params",
+        "name": "Query Parameters",
+        "description": "The query parameters you want to receive when this flow is started",
+        "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"parameterName\":{\"type\":\"string\"},\"type\":{\"type\":{\"enum\":[\"string\",\"number\",\"boolean\"]}},\"repeating\":{\"type\":{\"enum\":[\"true\",\"false\"]}},\"required\":{\"type\":{\"enum\":[\"true\",\"false\"]}}}}}"
+       },
+       "value": {
+        "metadata": "",
+        "value": ""
+       }
+      },
+      {
+       "name": "pathParams",
+       "type": "complex_object",
+       "display": {
+        "readonly": true,
+        "type": "params",
+        "name": "Path Parameters",
+        "description": "The path parameters for the trigger",
+        "schema": "{\"type\": \"array\",\"items\": {\"type\": \"object\",\"properties\": {\"parameterName\": {\"type\": \"string\"},\"type\": {\"type\": {\"enum\": [\"string\",\"number\",\"boolean\"]}}}}}"
+       },
+       "value": {
+        "metadata": "",
+        "value": ""
+       }
+      },
+      {
+       "name": "headers",
+       "type": "complex_object",
+       "display": {
+        "type": "params",
+        "name": "Headers",
+        "description": "The HTTP header parameters you want to receive when this flow is started",
+        "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"parameterName\":{\"type\":\"string\"},\"type\":{\"type\":{\"enum\":[\"string\",\"number\",\"boolean\"]}},\"repeating\":{\"type\":{\"enum\":[\"true\",\"false\"]}},\"required\":{\"type\":{\"enum\":[\"true\",\"false\"]}}}}}"
+       },
+       "value": {
+        "metadata": "",
+        "value": "[{\"parameterName\":\"Accept\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Accept-Charset\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Accept-Encoding\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Content-Type\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Content-Length\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Connection\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Cookie\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false},{\"parameterName\":\"Pragma\",\"type\":\"string\",\"repeating\":\"false\",\"required\":\"false\",\"visible\":false}]"
+       }
+      },
+      {
+       "name": "body",
+       "type": "complex_object",
+       "display": {
+        "name": "Request Schema",
+        "description": "The request schema of the trigger",
+        "type": "texteditor",
+        "syntax": "json",
+        "readonly": false,
+        "valid": true,
+        "visible": true
+       },
+       "value": {
+        "value": "{\"to\":\"string\",\"body\":\"string\"}"
+       }
+      }
+     ],
+     "inputs": [],
+     "handler": {
+      "settings": [
+       {
+        "name": "Method",
+        "type": "string",
+        "required": true,
+        "allowed": [
+         "GET",
+         "POST",
+         "PUT",
+         "PATCH",
+         "DELETE"
+        ],
+        "value": "POST",
+        "display": {
+         "readonly": true,
+         "description": "The type of the HTTP method",
+         "name": "Method",
+         "type": "dropdown",
+         "selection": "single"
+        }
+       },
+       {
+        "name": "Path",
+        "type": "string",
+        "required": true,
+        "display": {
+         "description": "The resource path you have selected",
+         "name": "Path"
+        },
+        "value": "/sendSMS"
+       },
+       {
+        "name": "OutputValidation",
+        "type": "boolean",
+        "required": false,
+        "display": {
+         "description": "Selection for output validation, default false",
+         "name": "Output Validation"
+        },
+        "value": false
+       }
+      ]
+     },
+     "display": {
+      "description": "Simple REST Trigger",
+      "category": "General",
+      "visible": true,
+      "smallIcon": "icons/ic-tibco-wi-rest.svg",
+      "largeIcon": "icons/ic-tibco-wi-rest@2x.png"
+     },
+     "inputMappings": {},
+     "s3Prefix": "",
+     "key": "",
+     "keyfield": "",
+     "hashValue": {
+      "hash": "0d4e6f7c5a69832dcf488a579a1726ad5d3370fa79f467caf761c99a5ffdc922",
+      "version": "1.0.0"
+     }
+    },
+    "639d6586-9481-4763-bcdc-b00905a0da21": {
+     "id": "639d6586-9481-4763-bcdc-b00905a0da21",
+     "type": "flogo:activity",
+     "taskType": 1,
+     "version": "1.0.0",
+     "name": "tibco-wi-reply",
+     "title": "ReplyToHTTPMessage",
+     "description": "Simple HTTP Reply Activity",
+     "ref": "git.tibco.com/git/product/ipaas/wi-contrib.git/activity/general/reply",
+     "settings": [],
+     "outputs": [],
+     "inputs": [
+      {
+       "name": "Reply",
+       "allowed": [
+        "Success with Data",
+        "Error with Message"
+       ],
+       "type": "string",
+       "required": true,
+       "value": "Success with Data",
+       "display": {
+        "description": "Select a reply for the request",
+        "name": "Reply",
+        "type": "dropdown",
+        "selection": "single"
+       }
+      },
+      {
+       "name": "code",
+       "type": "integer",
+       "required": true,
+       "display": {
+        "visible": false
+       },
+       "value": 200,
+       "allowed": [
+        200,
+        500
+       ]
+      },
+      {
+       "name": "message",
+       "type": "string",
+       "required": true,
+       "value": "Ok",
+       "display": {
+        "mappable": true,
+        "settings": false,
+        "readonly": false,
+        "valid": true,
+        "visible": false
+       }
+      },
+      {
+       "name": "data",
+       "type": "complex_object",
+       "display": {
+        "description": "An example JSON data that you want to return to the caller of your REST flow",
+        "type": "texteditor",
+        "syntax": "json",
+        "name": "Schema",
+        "mappable": true,
+        "readonly": false,
+        "valid": true,
+        "visible": true
+       },
+       "value": {
+        "value": "{\"send\":\"string\"}"
+       }
+      }
+     ],
+     "handler": {
+      "settings": []
+     },
+     "display": {
+      "description": "Simple HTTP Reply Activity",
+      "category": "General",
+      "visible": true,
+      "smallIcon": "icons/ic-tibco-wi-reply.svg",
+      "largeIcon": "icons/ic-tibco-wi-reply@2x.png"
+     },
+     "inputMappings": {
+      "mappings": {
+       "$INPUT['data']['send']": {
+        "expression": "\"true\"",
+        "mappings": {}
+       }
+      }
+     },
+     "s3Prefix": "",
+     "key": "",
+     "keyfield": "",
+     "hashValue": {
+      "hash": "9305e105770f5263dd11ab12425832defffe799cbda337e877aa8ab54158a5a9",
+      "version": "1.0.0"
+     }
+    },
+    "52cfd873-ba70-4be8-9f3f-2cff11c3363e": {
+     "id": "52cfd873-ba70-4be8-9f3f-2cff11c3363e",
+     "type": "flogo:activity",
+     "taskType": 1,
+     "version": "1.0.0",
+     "name": "SMSsender",
+     "title": "SMSSender",
+     "description": "Activity sends a SMS to any Number over Twilio API",
+     "ref": "github.com/JGrotex/tci-wi-twilio-extension/Twilio/activity/sms",
+     "settings": [],
+     "outputs": [
+      {
+       "name": "send",
+       "type": "boolean"
+      }
+     ],
+     "inputs": [
+      {
+       "name": "accountSID",
+       "type": "string",
+       "required": true,
+       "display": {
+        "name": "account SID",
+        "description": "Twilio API Config of your account_sid"
+       },
+       "value": "<your Twilio Account SID>"
+      },
+      {
+       "name": "authToken",
+       "type": "string",
+       "required": true,
+       "display": {
+        "name": "auth Token",
+        "description": "Twilio API Config of your auth_token"
+       },
+       "value": "<your Twilio Account Token>"
+      },
+      {
+       "name": "FromNumber",
+       "type": "string",
+       "required": true,
+       "display": {
+        "name": "From Phone Number",
+        "description": "Twilio API Config of from Phone Number"
+       },
+       "value": "TIBCO-GODev"
+      },
+      {
+       "name": "ToNumber",
+       "type": "string",
+       "required": true
+      },
+      {
+       "name": "SMStext",
+       "type": "string",
+       "required": true
+      }
+     ],
+     "handler": {
+      "settings": []
+     },
+     "display": {
+      "category": "Twilio",
+      "visible": true,
+      "smallIcon": "icons/ic-twilio-sms.png",
+      "largeIcon": "icons/ic-twilio-sms@2x.png",
+      "description": "Activity sends a SMS to any Number over Twilio API"
+     },
+     "inputMappings": {
+      "mappings": {
+       "$INPUT['ToNumber']": {
+        "expression": "$TriggerData.body.to",
+        "mappings": {}
+       },
+       "$INPUT['SMStext']": {
+        "expression": "$TriggerData.body.body",
+        "mappings": {}
+       }
+      }
+     },
+     "s3Prefix": "kvfidnjp4khxed2z6rycu3pu4h2a5fyz",
+     "key": "kvfidnjp4khxed2z6rycu3pu4h2a5fyz/Twilio/activity/sms/activity.json",
+     "keyfield": "",
+     "hashValue": {
+      "hash": "8f3e87c4ec4687104749050a81bf236022b23f781042a4c59b95eab6287855ce",
+      "version": "1.0.0"
+     }
+    }
+   },
+   "paths": {
+    "root": {
+     "is": "85fd78a9-9054-4f02-a170-585cb993a762"
+    },
+    "nodes": {
+     "85fd78a9-9054-4f02-a170-585cb993a762": {
+      "id": "85fd78a9-9054-4f02-a170-585cb993a762",
+      "taskID": "70b5d7f9-4681-4a5d-9d9d-38ce571404ae",
+      "type": 3,
+      "children": [
+       "4a3013dc-3e0f-4532-ad02-cae739ce0b7b"
+      ],
+      "parents": [],
+      "subProc": [],
+      "__status": {
+       "isSelected": true
+      }
+     },
+     "45e042b5-51bd-4f98-b7d3-875663aa3bc6": {
+      "id": "45e042b5-51bd-4f98-b7d3-875663aa3bc6",
+      "taskID": "639d6586-9481-4763-bcdc-b00905a0da21",
+      "type": 5,
+      "children": [],
+      "parents": [
+       "4a3013dc-3e0f-4532-ad02-cae739ce0b7b"
+      ],
+      "subProc": [],
+      "__status": {
+       "isSelected": false
+      }
+     },
+     "4a3013dc-3e0f-4532-ad02-cae739ce0b7b": {
+      "id": "4a3013dc-3e0f-4532-ad02-cae739ce0b7b",
+      "taskID": "52cfd873-ba70-4be8-9f3f-2cff11c3363e",
+      "type": 5,
+      "children": [
+       "45e042b5-51bd-4f98-b7d3-875663aa3bc6"
+      ],
+      "parents": [
+       "85fd78a9-9054-4f02-a170-585cb993a762"
+      ],
+      "subProc": [],
+      "__status": {
+       "isSelected": false
+      }
+     }
+    }
+   }
+  }
+ },
+ "createdTime": 1515143037192,
+ "lastUpdatedTime": 1515143039189,
+ "isPushed": true,
+ "appChanges": 0
+}
