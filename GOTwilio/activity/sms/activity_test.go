@@ -55,7 +55,7 @@ func TestEval(t *testing.T) {
 	//setup attrs
 	tc.SetInput("accountSID", gprops["accountSID"])
 	tc.SetInput("authToken", gprops["authToken"])
-	tc.SetInput("FromNumber", gprops["ToNumber"])
+	tc.SetInput("FromNumber", "TWILIO")
 	tc.SetInput("ToNumber", gprops["ToNumber"])
 	tc.SetInput("SMStext", "hi from GODev")
 
