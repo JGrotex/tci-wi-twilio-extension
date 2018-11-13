@@ -6,7 +6,6 @@ first draft Version with just a SMS sender using Twilio API, more to come ...
 The attached ZIP contains the first release v.1.0 and can just uploaded under TIBCO Cloud Integration Extensions
 
 Please create your own 'free' Access Key on Twilio (http://www.twilio.com) to enter into the Activity Details.
-A TCI Flogo Connector is planed for later. 
 
 ## Sample Integration
 TCI Sample APP Exports can be found in [TCIAppExport](TCIAppExport) Folder, they are all ready to use.
@@ -17,7 +16,7 @@ available Activities so far
 ### SMS Sender
 Flow Screenshot inside TIBCO Cloud Integration Flogo / Web Integrator
 
-![Twilio SMS image](screenshots/twilio-SMS-in-TCI-WebIntegrator.png?raw=true "TCI WI Twilio SMS Screenshot")
+![Twilio SMS image](screenshots/twilio-SMS-in-TCI-WebIntegrator.png?raw=true "TCI Flogo Twilio SMS Screenshot")
 
 Input
 - accountSID            string

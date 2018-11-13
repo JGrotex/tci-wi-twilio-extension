@@ -6,14 +6,14 @@
     "type": "flogo:activity",
      
     "display": {
-       "category": "Twilio",
+       "category": "GOTwilio",
        "visible": true,
        "smallIcon": "icons/ic-twilio-sms.png",
        "largeIcon": "icons/ic-twilio-sms@2x.png",
        "description": "Activity sends a SMS to any Number over Twilio API"
     },
  
-    "ref": "github.com/JGrotex/tci-wi-twilio-extension/Twilio/activity/sms",
+    "ref": "github.com/JGrotex/tci-wi-twilio-extension/GOTwilio/activity/sms",
     "inputs": [
            {
             "name": "accountSID",
