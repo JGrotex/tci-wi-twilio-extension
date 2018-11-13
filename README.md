@@ -6,7 +6,7 @@ first draft Version with just a SMS sender using Twilio API, more to come ...
 The attached ZIP contains the first release v.1.0 and can just uploaded under TIBCO Cloud Integration Extensions
 
 Please create your own 'free' Access Key on Twilio (http://www.twilio.com) to enter into the Activity Details.
-A TCI WI Connector is planed for later. 
+A TCI Flogo Connector is planed for later. 
 
 ## Sample Integration
 TCI Sample APP Exports can be found in [TCIAppExport](TCIAppExport) Folder, they are all ready to use.
@@ -15,7 +15,7 @@ here a sample of how to [connect this Service](connectAMXBPM.md) from TIBCO Acti
 ## Activities
 available Activities so far
 ### SMS Sender
-Flow Screenshot inside TIBCO Cloud Integration Web Integrator
+Flow Screenshot inside TIBCO Cloud Integration Flogo / Web Integrator
 
 ![Twilio SMS image](screenshots/twilio-SMS-in-TCI-WebIntegrator.png?raw=true "TCI WI Twilio SMS Screenshot")
 
@@ -44,4 +44,4 @@ Sample Output Data
 ``
 
 <hr>
-<sub><b>Note:</b> more TCI Extensions can be found here: https://tibcosoftware.github.io/tci-awesome/ </sub>
+<sub><b>Note:</b> more TCI Flogo Extensions can be found here: https://tibcosoftware.github.io/tci-awesome/ </sub>
