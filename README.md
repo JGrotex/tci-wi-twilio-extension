@@ -1,4 +1,4 @@
-# TCI WI Twilio Extension
+# TCI WI GOTwilio Extension
 [![Go Report Card](https://goreportcard.com/badge/github.com/JGrotex/tci-wi-twilio-extension)](https://goreportcard.com/report/github.com/JGrotex/tci-wi-twilio-extension) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 first draft Version with just a SMS sender using Twilio API, more to come ...
